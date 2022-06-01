@@ -11,8 +11,8 @@ export const FunctionalCounter = (props) => {
         <div className='boxCenter'>
           {/* Mengirim props ke Button, dan menambah props baru */}
           {/* Mengirim props ke Button, dan menambah props baru */}
-          <Button act={inc} label="increment"/>
-          <Button act={dec} label="decrement"/>
+          <Button act={inc} label="+"/>
+          <Button act={dec} label="-"/>
         </div>
     </div>
   )
