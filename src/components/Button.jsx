@@ -3,9 +3,9 @@ import React from 'react'
 
 //Props drilling
 //Catatan: ada yang hilang
-export const Button = ({, act, label}) => { //Memakai props dari parent component nya, dipanggil menggunakan metode desctructuring
+export const Button = ({idTest, act, label}) => { //Memakai props dari parent component nya, dipanggil menggunakan metode desctructuring
   return (
-    <button data-testid={} className='button-5' onClick={act}>
+    <button data-testid={idTest} className='button-5' onClick={act}>
       {label}
     </button>
   )
