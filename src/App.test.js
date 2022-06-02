@@ -18,10 +18,10 @@ describe("UI Test", () => {
     //bentuk awal
     // const view = render(<App />);
     // const pickByTest = view.getAllByTestId
-  
+
     //Untuk menunjuk komponen yang ditunjuk berdasarkan testid
     const headerEl = screen.getByTestId('header');
-  
+
     expect(headerEl.textContent).toBe('Counter App');
   });
 
@@ -35,8 +35,18 @@ describe("Functional Test", () => {
     const incButton = screen.getByTestId('increment-test')
     const counterEl = screen.getByTestId('counter')
 
-    for(let i = 0; i<clicked; i++) {
+    for (let i = 0; i < clicked; i++) {
       fireEvent.click(incButton)
+    }
+
+    expect(counterEl.textContent).toBe(`${clicked}`)
+  })
+  test(`Test on decrement button adds 1 to the counter ${clicked}`, () => {
+    const decButton = screen.getByTestId('increment-test')
+    const counterEl = screen.getByTestId('counter')
+
+    for (let i = 0; i < clicked; i++) {
+      fireEvent.click(decButton)
     }
 
     expect(counterEl.textContent).toBe(`${clicked}`)
