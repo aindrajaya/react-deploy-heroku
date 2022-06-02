@@ -5,6 +5,7 @@ export const FunctionalCounter = (props) => {
   const {count, inc, dec} = props; //desctructuring
   return (
     <div>
+      <h2 data-testid='header'>Counter App</h2>
       <div className='box'>
           <h1>{count}</h1>
         </div>
